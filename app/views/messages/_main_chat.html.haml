@@ -1,0 +1,29 @@
+.main-chat
+ .mainchat__main
+  .main-chat__main__header 
+   .main-chat__main__header__left
+    .main-chat__main__header__left__group-name
+     groupname
+     .main-chat__main__header__left__member-name
+      Member:
+   .main-chat__main__header__right
+    =link_to "#", class: "contents__btn contents__btn--edit" do
+     edit
+ .main-chat__message
+  .main-chat__message__info
+   .main-chat__message__info__name
+    kazuki   
+   .main-chat__message__info__time
+    2019/10/19/
+  .main-chat__message__text
+   abc
+ .main-chat__form
+  .main-chat__form__content
+   .main-chat__form__content__input
+    %input.main-chat__form__content__input__textbox{:placeholder => "type a message",:type => "text"}
+    %label.main-chat__form__content__input__image
+     = icon('fas', 'image')
+     %input.main-chat__form__content__input__image__file{:type=> "file"}
+
+   %input.main-chat__form__content__send{:type => "submit", :value => "send"}
+ 
