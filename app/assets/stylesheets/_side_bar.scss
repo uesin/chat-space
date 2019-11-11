@@ -1,0 +1,36 @@
+
+.side-bar{
+  width: 300px;
+  color: #ffffff;
+  float: left;
+ &__header {
+  display: flex;
+  height: 100px;
+  background-color: #253141;
+  align-items: center;
+  padding-right: 20px;
+  padding-left: 20px;
+  justify-content: space-between;
+
+  &__name{
+    font-size: 16px;
+    font-weight: bold;
+  }
+ }
+
+ &__contents{
+  background-color: #2f3e51;
+  height: calc(100vh - 70px);
+  padding: 20px 20px 40px 20px;
+  margin-top:auto;
+
+ &__group-name{
+    font-weight: bold;
+    font-size: 15p
+  }
+   &__message{
+    font-weight: bold;
+    font-size: 11px;
+  } 
+ }
+}
