@@ -4,6 +4,18 @@
   width: 300px;
   color: #ffffff;
   float: left;
+  a:active {
+ 
+    color:#fff;
+    text-decoration:none;
+     
+    }
+    a:visited {
+ 
+      color:#fff;
+      text-decoration:underline;
+       
+      }
  &__header {
   display: flex;
   height: 100px;
@@ -17,23 +29,29 @@
     font-size: 16px;
     font-weight: bold;
   }
+  
+  &__icon{
+    color: white;
+  }
  }
  &__groups{
   background-color: #2f3e51;
   height: calc(100vh - 100px);
   padding: 0 20px;
   overflow: scroll;
+  box-sizing: border-box;
   
+  
+    
   
 
  &__contents{
   padding: 20px 20px 40px 20px;
-  box-sizing: border-box;
   
 
  &__group-name{
     font-weight: bold;
-    font-size: 15p
+    font-size: 15px;
   }
    &__message{
     font-weight: bold;
