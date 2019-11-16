@@ -1,22 +1,22 @@
-main-chat
+.main-chat
  .mainchat__main
   .main-chat__main__header 
    .main-chat__main__header__left
     .main-chat__main__header__left__group-name
-     groupname
+     = @group.name
      .main-chat__main__header__left__member-name
-      Member:
+      member:
+      - @group.users.each do |user|
+       = user.name
    .main-chat__main__header__right
-    =link_to "#", class: "contents__btn contents__btn--edit" do
+    =link_to edit_group_path(current_group) do
      edit
- .main-chat__message  
+ .main-chat__message
+  = render @messages
   .main-chat__message__info
-   .main-chat__message__info__name
-    kazuki   
+   .main-chat__message__info__name  
    .main-chat__message__info__time
-    2019/10/19/
   .main-chat__message__text
-   abc
  .main-chat__form
   = form_for [@group, @message] do |f|
    .main-chat__form__content
@@ -28,5 +28,3 @@ main-chat
 
      = f.submit 'Send', class: 'main-chat__form__content__send'
   
- 
-
