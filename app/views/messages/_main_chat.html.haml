@@ -11,12 +11,14 @@
    .main-chat__main__header__right
     =link_to edit_group_path(@group) do
      edit
+     
  .main-chat__message
   = render @messages
   .main-chat__message__info
    .main-chat__message__info__name  
    .main-chat__message__info__time
   .main-chat__message__text
+
  .main-chat__form
   = form_for [@group, @message] do |f|
    .main-chat__form__content
@@ -26,7 +28,7 @@
       = icon('fas', 'image')
       = f.file_field :image, class: 'main-chat__form__content__input__image__file'
 
-     = f.submit 'Send', class: 'main-chat__form__content__send'
+     = f.submit 'Send', class: 'main-chat__form__content__send',id:'submit'
   
  
 
