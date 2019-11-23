@@ -23,7 +23,7 @@
     .main-chat__form__content__input
      = f.text_field :content, class: 'main-chat__form__content__input__textbox', placeholder: 'type a message' 
      = f.label :image, class: 'main-chat__form__content__input__image' do
-      = icon('fas', 'image')
+      = fa_icon 'image',class: 'icon'
       = f.file_field :image, class: 'main-chat__form__content__input__image__file'
 
      = f.submit 'Send', class: 'main-chat__form__content__send',id:'submit'
